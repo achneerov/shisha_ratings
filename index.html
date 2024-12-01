@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shisha Ratings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4">
+    <h1 class="text-2xl font-bold text-center">Shisha Ratings</h1>
+  </header>
+
+  <!-- Table Section -->
+  <main class="p-4">
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-gray-300 bg-white shadow-md rounded-lg">
+        <thead class="bg-blue-100">
+          <tr>
+            <th class="border border-gray-300 px-4 py-2">Index</th>
+            <th class="border border-gray-300 px-4 py-2">Name</th>
+            <th class="border border-gray-300 px-4 py-2">Brand</th>
+            <th class="border border-gray-300 px-4 py-2">Tried?</th>
+            <th class="border border-gray-300 px-4 py-2">Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamic rows -->
+          <script>
+            const shishaData = [
+              { index: 1, name: "Apple", brand: "Fakher", tried: "No", rating: "?" },
+              { index: 2, name: "Apple Mint", brand: "Fakher", tried: "No", rating: "?" },
+              { index: 3, name: "Blueberry Mint", brand: "Fakher", tried: "Yes", rating: "?" },
+              { index: 4, name: "Cream Mint", brand: "Fakher", tried: "No", rating: "?" },
+              { index: 5, name: "Grapefruit Mint", brand: "Fakher", tried: "Yes", rating: "3" },
+              { index: 6, name: "Grape Mint", brand: "Fakher", tried: "No", rating: "?" },
+              { index: 7, name: "Watermelon Mint", brand: "Fakher", tried: "No", rating: "?" },
+              { index: 8, name: "Gum Mint", brand: "Fakher", tried: "No", rating: "?" },
+              { index: 9, name: "Lemon Mint", brand: "Fakher", tried: "No", rating: "?" },
+              { index: 10, name: "Mint", brand: "Fakher", tried: "No", rating: "?" },
+              { index: 11, name: "Orange Mint", brand: "Fakher", tried: "No", rating: "?" },
+              { index: 12, name: "Peach", brand: "Fakher", tried: "No", rating: "?" },
+              { index: 13, name: "Vanilla", brand: "Fakher", tried: "No", rating: "?" },
+              { index: 14, name: "Coconut", brand: "Fakher", tried: "No", rating: "?" },
+              { index: 15, name: "Love 66", brand: "Adalya", tried: "Yes", rating: "?" },
+              { index: 16, name: "Mi Amor", brand: "Adalya", tried: "Yes", rating: "?" },
+              { index: 17, name: "Lady Killer", brand: "Adalya", tried: "Yes", rating: "?" },
+              { index: 18, name: "Hawaii", brand: "Adalya", tried: "Yes", rating: "?" },
+              { index: 19, name: "Habibiz Mix", brand: "Mix Maison", tried: "Yes", rating: "?" },
+              { index: 20, name: "OVO", brand: "Mix Maison", tried: "Yes", rating: "?" },
+              { index: 21, name: "BlueMist", brand: "Starbuzz", tried: "Yes", rating: "?" },
+              { index: 22, name: "White Mint", brand: "Starbuzz", tried: "No", rating: "?" },
+              { index: 23, name: "Pink", brand: "Starbuzz", tried: "No", rating: "?" },
+              { index: 24, name: "Safari Melon Dew", brand: "Starbuzz", tried: "No", rating: "?" },
+              { index: 25, name: "Melon Blue", brand: "Starbuzz", tried: "No", rating: "?" },
+              { index: 26, name: "Black Peach", brand: "Starbuzz", tried: "No", rating: "?" },
+              { index: 27, name: "White Peach", brand: "Starbuzz", tried: "No", rating: "?" },
+              { index: 28, name: "Sex on the Beach", brand: "Starbuzz", tried: "No", rating: "?" }
+            ];
+
+            shishaData.forEach(shisha => {
+              document.write(`
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2 text-center">${shisha.index}</td>
+                  <td class="border border-gray-300 px-4 py-2">${shisha.name}</td>
+                  <td class="border border-gray-300 px-4 py-2">${shisha.brand}</td>
+                  <td class="border border-gray-300 px-4 py-2 text-center">${shisha.tried}</td>
+                  <td class="border border-gray-300 px-4 py-2 text-center">${shisha.rating}</td>
+                </tr>
+              `);
+            });
+          </script>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center p-4">
+    <p>© 2024 Shisha Ratings. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
